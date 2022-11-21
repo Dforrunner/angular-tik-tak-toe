@@ -1,15 +1,9 @@
-<div class="flex flex-between align-center">
-  <div>Player Turn: <app-player [player]="player"></app-player></div>
-
-  <div id="scoreTracker">
-    <span class="primary-color">X-{{ xScrore }}</span> | 
-    <span class="accent-color">O-{{ oScrore }}</span>
-  </div>
-
-  <button [class]="'my-20'" (click)="newGame()" mat-raised-button>
-    New Game
-  </button>
+<div id="scoreTracker">
+  <span class="primary-color">X-{{ xScrore }}</span> | 
+  <span class="accent-color">O-{{ oScrore }}</span>
 </div>
+
+
 
 <div id="winner-stack" #winnerStackDiv>
   <app-player
@@ -40,3 +34,13 @@
   </div>
 
 </main>
+
+<div id="bottomBar">
+  <div>Player Turn: <app-player [player]="player"></app-player></div>
+
+ 
+
+  <button [class]="'my-20'" (click)="newGame()" mat-raised-button color="dark">
+    New Game
+  </button>
+</div>
